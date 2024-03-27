@@ -51,15 +51,16 @@ h1 a {
     color: var(--cor-clara);
     background-color: var(--cor-escura);
     padding: 0.3rem 1rem;
-    border-radius:4px;
+    border-radius: 4px;
 }
 
-header{
+header {
     height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 nav h2 a {
     color: var(--cor-escura);
     font-size: 1.2rem;
@@ -69,16 +70,18 @@ nav h2 a {
 
 }
 
-nav h2 a:hover, nav h2 a:focus
-.links-menu a:hover, .links-menu a:focus{
+nav h2 a:hover,
+nav h2 a:focus .links-menu a:hover,
+.links-menu a:focus {
 
     background-color: var(--cor-intermediaria);
 
 
 
 }
+
 /* estilos para a lista ul contida no nav*/
-.links-menu{
+.links-menu {
     list-style: none;
     display: none;
     /* Atenção neste ponto fazemos com que os links do menu iniciem escondidos (display:none)
@@ -87,7 +90,7 @@ nav h2 a:hover, nav h2 a:focus
 }
 
 /* estilos para os links contidos na ul dentro do nav*/
-.links-menu a{
+.links-menu a {
     color: var(--cor-escura);
     font-weight: bold;
     display: flex;
@@ -97,7 +100,7 @@ nav h2 a:hover, nav h2 a:focus
 }
 
 /* regra que será aplicada somente quando o menu for acionado para abertura*/
-.links-menu.aberto{
+.links-menu.aberto {
     /*ativando o flex fazemos com que os links voltem a aparecer.*/
 
     display: flex;
@@ -111,7 +114,7 @@ nav h2 a:hover, nav h2 a:focus
     background-color: var(--cor-clara);
 }
 
-.destaque{
+.destaque {
     height: 88vh;
     background-image: url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
@@ -119,10 +122,19 @@ nav h2 a:hover, nav h2 a:focus
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    color: var(--cor-clara);
+
 }
 
-.destaque h2, .destaque p {
+.destaque p {
     color: var(--cor-clara);
     text-align: center;
+}
+
+.destaque h2{
+    font-size: clamp(3rem, 10vw ,7rem);
+}
+
+.destaque p{
+    font-size: clamp (1.5rem, 3vw, 3rem);
 }
