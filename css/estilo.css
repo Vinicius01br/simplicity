@@ -96,7 +96,7 @@ nav h2 a:hover, nav h2 a:focus
 }
 
 /* regra que será aplicada somente quando o menu for acionado para abertura*/
-.links-menu{
+.links-menu.aberto{
     /*ativando o flex fazemos com que os links voltem a aparecer.*/
 
     display: flex;
@@ -108,4 +108,20 @@ nav h2 a:hover, nav h2 a:focus
     left: 0;
     right: 0;
     background-color: var(--cor-clara);
+}
+
+.destaque{
+    height: 500px;
+    background-image: url(../imagens/fundo-destaque.jpg);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.destaque h2, .destaque p {
+    color: var(--cor-clara);
+    text-align: center;
 }
