@@ -79,6 +79,10 @@ nav h2 a:hover, nav h2 a:focus
 /* estilos para a lista ul contida no nav*/
 .links-menu{
     list-style: none;
+    display: none;
+    /* Atenção neste ponto fazemos com que os links do menu iniciem escondidos (display:none)
+    posteriomente, com ajuda do CSS combinado com JS,
+    faremos os controles para exbir/esconder de forma alternada.*/
 }
 
 /* estilos para os links contidos na ul dentro do nav*/
@@ -87,7 +91,21 @@ nav h2 a:hover, nav h2 a:focus
     font-weight: bold;
     display: flex;
     height: 50px;
-    background-color: yellow;
     justify-content: center;
     align-items: center;
+}
+
+/* regra que será aplicada somente quando o menu for acionado para abertura*/
+.links-menu{
+    /*ativando o flex fazemos com que os links voltem a aparecer.*/
+
+    display: flex;
+    /*fazemos com que eles fiquem um em cima do outro (flex coluna*/
+    flex-direction: column;
+    /*Ativamos position:absolute e ajustamos a posição final dos links
+    usando propriedades de coordenadas.*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-clara);
 }
