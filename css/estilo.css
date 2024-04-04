@@ -70,9 +70,7 @@ nav h2 a {
 
 }
 
-nav h2 a:hover,
-nav h2 a:focus .links-menu a:hover,
-.links-menu a:focus {
+nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
 
     background-color: var(--cor-intermediaria);
 
@@ -131,100 +129,193 @@ nav h2 a:focus .links-menu a:hover,
     text-align: center;
 }
 
-.destaque h2{
-    font-size: clamp(3rem, 10vw ,7rem);
+.destaque h2 {
+    font-size: clamp(3rem, 10vw, 7rem);
 }
 
-.destaque p{
+.destaque p {
     font-size: clamp (1.5rem, 3vw, 3rem);
 }
 
-@keyframes animaDestaque{
-    from{
+@keyframes animaDestaque {
+    from {
         opacity: 0;
         transform: translateY(-300px);
     }
 
-  to {
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+    }
 }
 
-.destaque h2, .destaque p{
+.destaque h2,
+.destaque p {
     animation-name: animaDestaque;
     animation-duration: 10s;
 }
 
-article h2{
+article h2 {
     padding: 1rem;
     font-size: 1.4rem;
     font-family: Raleway, sans-serif;
     color: var(--cor-titulo);
 }
 
-.front-end, .historia, .localizacao{
+.front-end,
+.historia,
+.localizacao {
     text-align: center;
 }
 
-article p{
+article p {
     padding: 0.5rem 0;
     font-size: 1.2rem;
 
 }
 
-address{
+address {
     font-style: normal;
     font-size: 1.2rem;
 }
 
-.historia{
+.historia {
     background-image: url(/imagens/fundo-madeira.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
 
-.historia h2{
+.historia h2 {
     color: var(--cor-clara);
     text-shadow: 5px 10px var(--cor-escura);
 }
 
-.historia iframe{
+.historia iframe {
     width: 100%;
-    max-width:700px;
+    max-width: 700px;
     margin-bottom: 2rem;
 }
 
-.localizacao iframe{
+.localizacao iframe {
     width: 100%;
     margin-top: 2rem;
 }
 
-.limitador{
+.limitador {
     width: 95vw;
     margin: auto;
 }
 
-.rodape{
-background-color: var(--cor-escura);
-color: var(--cor-clara);
-height: 30vh;
-font-weight: bold;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
+.rodape {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Regras para as pagínas produtos, serviços e contato*/
-.conteudo{
+.conteudo {
     background-color: var(--cor-intermediaria);
     padding: 0.5rem;
     border-radius: 8px;
 }
 
-.conteudo h2{
+.conteudo h2 {
     padding-left: 0;
     font-size: 1.8rem;
     border-bottom: solid 1px;
     margin-bottom: 1rem;
+}
+
+table {
+    border: solid 4px;
+    width: 80%;
+    margin: auto;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+
+caption {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+th,
+td {
+    border: solid 1px;
+}
+
+th {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border-color: var(--cor-escura);
+    padding: 0.8rem;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+.tdias {
+    text-align: center;
+}
+
+.valor {
+    text-align: end;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--cor-clara);
+}
+
+.dias {
+    text-align: center;
+    ;
+}
+
+th:nth-child(2) {
+    text-align: right;
+}
+
+th:last-child,
+td:last-child {
+    text-align: center;
+}
+
+td:last-child::before {
+    content: "R$ ";
+}
+
+@media screen and (min-width:570px) {
+    nav h2 {
+        display: none;
+
+    }
+
+    .links-menu {
+        display: flex;
+        
+    }
+
+    nav {
+        width: 60%;
+    }
+    
+    .links-menu li{
+        width: 100%;
+    }
+
+    .front-end figure img {
+        height: 150px;
+    }
+}
+
+@media screen and(min-width:1000px) {
+
+    html { font-size: 18px;}
+    .limitador (max-width: 1000px;)
 }
