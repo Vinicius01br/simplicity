@@ -63,7 +63,8 @@ header .limitador {
 }
 
 header{
-    position: fixed;
+    position: sticky;
+    z-index: 100;
     top: 0;
     background-color: var(--cor-clara);
 }
@@ -320,10 +321,27 @@ td:last-child::before {
         height: 150px;
     }
 }
+/*PAGINA SERVIÇOS*/
+.galeria{
+    text-align: center;
+}
 
-@media screen and(min-width:1000px) {
+.galeria img{
+    border-radius: 50%;
+    transform: scale(0.9);
+    filter: brightness(150%) blur(2px);
+}
+
+.galeria img:hover{
+    transform: scale(1);
+    filter: none;
+    border-radius: 10%;
+}
+
+@media screen and (min-width:1000px) {
 
     html { font-size: 18px;}
     .limitador{
         max-width: 1000px;
     }
+}
