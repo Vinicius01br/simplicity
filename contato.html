@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Simplicity</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <div class="limitador">
+            <h1><a href="index.html">Simplicity</a></h1>
+            <nav>
+                <h2><a href="">Menu&equiv;</a></h2>
+                <ul class="links-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article class=" conteudo limitador">
+            <h2>Contato</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quod fuga illum reiciendis at nihil
+                nesciunt id similique, sapiente dicta ea deleniti ratione. Maxime fugit sequi nesciunt minus
+                exercitationem eveniet voluptatibus vero, quia vel blanditiis veniam odit porro quae, illum laboriosam
+                quidem? Nulla, dolor repudiandae dicta deleniti tenetur omnis, sequi cumque dignissimos nemo error quos
+                doloribus iure natus vero repellat laborum hic at, ipsam itaque eos. Accusantium magnam, architecto esse
+                nulla eius perspiciatis. Corporis, dolore optio pariatur eos obcaecati provident nisi nemo in, assumenda
+                consectetur dolorem vero sequi aliquam tenetur eligendi accusantium! Veritatis quidem eaque mollitia
+                distinctio tempore ea nobis.</p>
+            <!-- Método:maneira como os dados serão
+                transmitido. Opções: get (envia pela url)
+            post (envia do corpo do formulario)
+        mais seguro para formulario de cadastro geral-->
+            <form action="" method="post">
+                <div class="nome"> <label for="">Nome:</label>
+                    <input type="text" name="" id="nome">
+                </div>
+
+                <div class="email"> <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+
+                <div class="nascimento">
+                    <label for="nascimento">Data De Nascimento:</label>
+                    <input type="date" name="nascimento" id="nascimento">
+                </div>
+                <div class="telefone">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone">
+                </div>
+
+                <div class="assunto"></div>
+                <label for="assunto">Assunto:</label>
+                <select name="assunto" id="assunto">
+                    <option value=""></option>
+                    <option>Dúvidas</option>
+                    <option>Elogios</option>
+                    <option>Reclamações</option>
+                    <option>Outros</option>
+                </select>
+
+                    <div class="mensagem">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar dados</button>
+            </form>
+        </article>
+    </main>
+    <footer class="rodape">
+        <p>Simplicity é um site ficticio desenvolvido por: Vinicius &copy; <time>2024</time></p>
+
+    </footer>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

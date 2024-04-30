@@ -59,10 +59,10 @@ header .limitador {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
-header{
+header {
     position: sticky;
     z-index: 100;
     top: 0;
@@ -78,7 +78,10 @@ nav h2 a {
 
 }
 
-nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
+nav h2 a:hover,
+nav h2 a:focus,
+.links-menu a:hover,
+.links-menu a:focus {
 
     background-color: var(--cor-intermediaria);
 
@@ -306,14 +309,14 @@ td:last-child::before {
 
     .links-menu {
         display: flex;
-        
+
     }
 
     nav {
         width: 60%;
     }
-    
-    .links-menu li{
+
+    .links-menu li {
         width: 100%;
     }
 
@@ -321,18 +324,19 @@ td:last-child::before {
         height: 150px;
     }
 }
+
 /*PAGINA SERVIÇOS*/
-.galeria{
+.galeria {
     text-align: center;
 }
 
-.galeria img{
+.galeria img {
     border-radius: 50%;
     transform: scale(0.9);
     filter: brightness(150%) blur(2px);
 }
 
-.galeria img:hover{
+.galeria img:hover {
     transform: scale(1);
     filter: none;
     border-radius: 10%;
@@ -341,8 +345,11 @@ td:last-child::before {
 
 @media screen and (min-width:1000px) {
 
-    html { font-size: 18px;}
-    .limitador{
+    html {
+        font-size: 18px;
+    }
+
+    .limitador {
         max-width: 1000px;
     }
 }
