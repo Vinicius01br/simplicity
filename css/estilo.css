@@ -336,6 +336,7 @@ td:last-child::before {
     transform: scale(1);
     filter: none;
     border-radius: 10%;
+    transition: 0.5s;
 }
 
 @media screen and (min-width:1000px) {
