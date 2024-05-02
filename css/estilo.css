@@ -370,7 +370,8 @@ button:focus {
     padding: 12px;
 }
 
-.campos-restante{ display: none;
+.campos-restante {
+    display: none;
 
 }
 
