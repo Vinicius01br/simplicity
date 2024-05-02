@@ -42,7 +42,7 @@
         mais seguro para formulario de cadastro geral-->
             <form action="" method="post">
                 <div class="nome"> <label for="">Nome:</label>
-                    <input type="text" name="" id="nome">
+                    <input required placeholder="Digite seu nome aqui" type="text" name="" id="nome">
                 </div>
 
                 <div class="email"> <label for="email">E-mail:</label>
@@ -53,27 +53,29 @@
                     <label for="nascimento">Data De Nascimento:</label>
                     <input type="date" name="nascimento" id="nascimento">
                 </div>
+                
                 <div class="telefone">
                     <label for="telefone">Telefone:</label>
                     <input type="tel" name="telefone" id="telefone">
                 </div>
 
-                <div class="assunto"></div>
-                <label for="assunto">Assunto:</label>
-                <select name="assunto" id="assunto">
-                    <option value=""></option>
-                    <option>Dúvidas</option>
-                    <option>Elogios</option>
-                    <option>Reclamações</option>
-                    <option>Outros</option>
-                </select>
+                <div class="assunto">
+                    <label for="assunto">Assunto:</label>
+                    <select name="assunto" id="assunto">
+                        <option value=""></option>
+                        <option>Dúvidas</option>
+                        <option>Elogios</option>
+                        <option>Reclamações</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
 
-                    <div class="mensagem">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
-                    </div>
+                <div class="mensagem">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                </div>
 
-                    <button type="submit">Enviar dados</button>
+                <button type="submit">Enviar dados</button>
             </form>
         </article>
     </main>
