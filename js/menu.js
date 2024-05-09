@@ -1,5 +1,4 @@
 `use strict`;
-console.log("menu")
 
 /*Selecionando o elemento de acionará a lista de links do menu*/
 const botaoMenu = document.querySelector("nav h2 a");

@@ -8,13 +8,20 @@ const campoCidade = formulario.querySelector("#cidade")
 const campoEstado = formulario.querySelector("#estado")
 const botaoBuscar = formulario.querySelector("#buscar")
 const mensagemStatus = formulario.querySelector("#status")
+const campoTelefone = formulario.querySelector("#telefone")
+
+/* seleção dos campos e ativação das máscaras */
+
+$(campoCep).mask("00000-000"); //01234-567
+$(campoTelefone).mask("(00) 0000-0000"); //(11) 2135-0300
+
 
 /*detectando quando o botão de buscar CEP é adicionado */
 botaoBuscar.addEventListener("click", async function (event) {
     /* Anular o comportamento padrão de redirecionamento/recarregamento da pagína.sempre acontece ao trabalhar
     com <a> e <form>.*/
     event.preventDefault();
-    if (campoCep.value.length !== 8) {
+    if (campoCep.value.length !== 9) {
         mensagemStatus.textContent = "Digite um CEP válido";
         mensagemStatus.style.color = "red";
 
@@ -29,8 +36,7 @@ botaoBuscar.addEventListener("click", async function (event) {
     (ou Web Services)*/
 
     //Etapa 1: prepara a URL da API com o CEP informado
-    let url = `https://viacep.com.br/ws/${cepInformado}/json/
-    `;
+    let url = `https://viacep.com.br/ws/${cepInformado}/json`;
     //Etapa 2: acessar a API (Com a URL) e guardar o retorno dela
     const resposta = await fetch(url);
     // Etapa 3: extrair os dados da resposta da API em formato JSON
