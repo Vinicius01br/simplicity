@@ -418,6 +418,12 @@ button:focus {
     transition: 0.5s;
 }
 
+#status-do-envio {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+}
+
 @media screen and (min-width:1000px) {
 
     html {

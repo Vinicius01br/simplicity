@@ -50,7 +50,7 @@ botaoBuscar.addEventListener("click", async function (event) {
         mensagemStatus.style.color = "blue";
         const camposRestantes = formulario.querySelectorAll('.campos-restante')
 
-        for(const campo of camposRestantes){
+        for (const campo of camposRestantes) {
             campo.classList.remove("campos-restantes");
         }
         campoEndereco.value = dados.logradouro;
@@ -62,3 +62,37 @@ botaoBuscar.addEventListener("click", async function (event) {
     }
 });
 
+/*Script do Formspree*/
+
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("status-do-envio");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: formulario.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Seu Email foi enviado com Sucesso.!";
+            status.style.color = "blue"
+            formulario.reset()
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.innerHTML = "Oops! Deu ruim"
+                    status.style.color = "red"
+                }
+            })
+        }
+    }).catch(error => {
+        status.innerHTML = "Oops! alguma coisa não está certa tente novamente mas tarde."
+        status.style.color = "red"
+    });
+}
+formulario.addEventListener("submit", handleSubmit)
