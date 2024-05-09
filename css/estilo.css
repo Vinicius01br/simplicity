@@ -408,7 +408,7 @@ button:focus {
 .galeria img {
     border-radius: 50%;
     transform: scale(0.9);
-    filter: brightness(150%) blur(2px);
+    filter: brightness(150%) blur(1px);
 }
 
 .galeria img:hover {

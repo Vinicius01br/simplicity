@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços</title>
-    <link rel="stylesheet" href="lightbox/js/lightbox.min.js">
+    <link rel="stylesheet" href="lightbox/css/lightbox.min.css">
     <link rel="stylesheet" href="css/estilo.css">
 
 </head>
@@ -35,10 +35,14 @@
 
 
             <figure class="galeria">
-                <a href="imagens/desenvolvimento-web.jpg"><img src="imagens/desenvolvimento-web-mini.jpg" alt=""></a>
-                <a href="imagens/design-grafico.jpg"><img src="imagens/design-grafico-mini.jpg" alt=""></a>
-                <a href="imagens/marketing-digital.jpg"><img src="imagens/marketing-digital-mini.jpg" alt=""></a>
-                <a href="imagens/consultoria-treinamento.jpg"><img src="imagens/consultoria-treinamento-mini.jpg"
+                <a data-title="Somos especialista em treinamentos" data-lightbox="fotos"
+                    href="imagens/desenvolvimento-web.jpg"><img src="imagens/desenvolvimento-web-mini.jpg" alt=""></a>
+                <a data-title="Fotos" data-lightbox="fotos" href="imagens/design-grafico.jpg"><img
+                        src="imagens/design-grafico-mini.jpg" alt=""></a>
+                <a data-title="Profissionais criativos" data-lightbox="fotos" href="imagens/marketing-digital.jpg"><img
+                        src="imagens/marketing-digital-mini.jpg" alt=""></a>
+                <a data-title="seu produto ou empresa será conhecido" data-lightbox="fotos"
+                    href="imagens/consultoria-treinamento.jpg"><img src="imagens/consultoria-treinamento-mini.jpg"
                         alt=""></a>
             </figure>
 
@@ -69,6 +73,13 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="lightbox/js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+            resizeDuration: 200,
+            wrapAround: true,
+            albumLabel: "Foto %1 de %2"
+        });
+    </script>
     <script src="js/menu.js"></script>
 </body>
 
